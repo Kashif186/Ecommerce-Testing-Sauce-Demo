@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yourusername/your-repository.git'
+                git branch: 'main', url: 'https://github.com/Kashif186/Ecommerce-Testing-Sauce-Demo.git'
             }
         }
         stage('Install dependencies') {
