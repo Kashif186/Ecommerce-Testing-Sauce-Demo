@@ -3,17 +3,23 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yourusername/your-repository.git'
+                script {
+                    git branch: 'main', url: 'https://github.com/yourusername/your-repository.git'
+                }
             }
         }
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                script {
+                    sh 'npm install'
+                }
             }
         }
         stage('Run tests') {
             steps {
-                sh 'npx cypress run'
+                script{
+                    sh 'npx cypress run'
+                }
             }
         }
         post {
