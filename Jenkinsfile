@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Run tests') {
             steps {
-                script{
+                script {
                     sh 'npx cypress run'
                 }
             }
