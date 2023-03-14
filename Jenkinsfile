@@ -12,6 +12,9 @@ pipeline {
             }
         }
         stage('Run tests') {
+            environment {
+                PATH = "C:\Program Files\nodejs"
+            }
             steps {
                 sh 'npx cypress run'
             }
